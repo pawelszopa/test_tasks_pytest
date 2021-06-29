@@ -88,3 +88,57 @@ kontext uruchomienia modułu
 
 smoke testy - sprawdzają kluczowe elementy aplikacji, które działają
 
+pytest
+- fixture -> generator fn -- yield  -- teardown 
+- CLI - (collect only - sluzy do testowania selektory testow)
+test runner potrafi odpalac inne library np unit test i nose
+  - parametryzacja
+ ids - wyswietlanie informacji o danym obiekcie w przypadku faila test casa.
+    
+3A system - 
+A - arrange
+A - act
+A - assert
+
+assert - przypadek w ktorym sprawdzamy cos - if condition
+test case - przypadek testowy pewnego elementu czesci kodu funkcji itp
+test swite - zbior logicznie polaczonych ze soba test casow
+test plan - zbior test swite - takie overview kiedy co powinno sie testowac - strategia.
+
+test runner - program do uruchamiania testow
+-assertion library -  w pytest nie ma library assertion - to nie jest do konca prawda bo mamy assertRaises.
+
+
+- unit test sprawdza wyzolowana czesc atomiczna kodu - > brak side effects -> uzywamy dublerow
+  - double
+  - fake - ma logike i dane i podmieniamy go np w czytaniu plikow np strigio. - baza inmemory - ligtwight server - gunicorn
+  - mock - ma traceback
+  - monkey patching - podmiana jesli mamy ciezkie rzeczy do podmiany i mamy classe i w __init__ jest db - ale db nie jest parametrem tylko zahardocowane. 
+  - stub - ma metody ale zwracaja return 2 
+  - dummy - None - podkladamy default None - jak uzywamy cos co nei jest kluczowe to dajemy na None i nie uzywamy tego bez wykrzaczenia 
+  - spy - sprawdza czy dana funkcja zostala wywolana
+- functional tests - testujemy pewna funkcjonalnosci - np dodanie do koszyka -  mozemy uzywac baz danych, 
+-> selenium pySelenium - manager podajemy mu kod on przekierowywuje do driver a driver steruje przegladarka
+  istnieje fake do przegladarki -> phantom.js - webkit, gecko - casper.js  - mozna zapomniec ale jest chrome headless
+  
+webscriping 
+automatyzacja
+
+TDD - test driven development
+red 
+green
+refactor
+
+BDD - behavioural driven development
+- testy funkcjonalne i end to end
+- najpierw kod potem 
+
+DDD - domain driven  development
+- w pracy w banku pracuja programisci z doswiadczeniem bankowym
+
+EDD - Event driven development
+ - Nasz kod nie dziala - dopiero jak cos sie zdazy to nasz kod zacznie dzialac - jak dostaniemy request to wtedy dopiero kod sie uruchamia. (subscribe/observer)
+
+Reactive programing
+ - podobne do EDD - kod "nie dziala" - jezeli sie data/stream zmieni to wtedy zachodzi zdazenie - netflix i player i jeli przyjdzie stream z audi i video to wtedy merge.
+

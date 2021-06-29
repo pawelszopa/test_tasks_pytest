@@ -2,6 +2,7 @@ import time
 
 import pytest
 
+
 # scope session zmienia na odpalenie sie przed wszystkim i po wszystkim czyuli tylko raz.
 @pytest.fixture(autouse=True, scope='session')
 def footer_session_scope():

@@ -28,7 +28,7 @@ class TaskDBMongo:
 
     def count(self):  # type () -> int
         """Return number of tasks in db."""
-        return self._db.task_list.count()
+        return self._db.task_list.estimated_document_count()
 
     def update(self, task_id, task):  # type (int, dict) -> ()
         """Modify task in db with given task_id."""
